@@ -1,4 +1,4 @@
-import ctypes
+from ctypes import cast,py_object
 boolean1 = True
 boolean2 =True
 boolean3 = False
@@ -44,7 +44,7 @@ any variables and can be useful in a memory-constrained environment.
 for i in range(len(List)):
     if(startAddress<id(List[i])):
         startAddress=id(List[i])
-value_at_address = ctypes.cast(startAddress, ctypes.py_object).value
+value_at_address = cast(startAddress,py_object).value
 print(value_at_address)
 
 
